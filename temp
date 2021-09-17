@@ -1,0 +1,13 @@
+dotnet ef migrations add init --context AradDbContext --project ../Gaia.IdP.Data -o ../Gaia.IdP.Data/Migrations/Arad/AradDb
+dotnet ef migrations add init --context PersistedGrantDbContext --project ../Gaia.IdP.Data -o ../Gaia.IdP.Data/Migrations/IdentityServer/PersistedGrantDb
+dotnet ef migrations add init --context ConfigurationDbContext --project ../Gaia.IdP.Data -o ../Gaia.IdP.Data/Migrations/IdentityServer/ConfigurationDb
+
+discovery document: /.well-known/openid-configuration
+http://localhost:5000/connect/authorize?client_id=0ace935c-6286-498a-a550-d29d7e446da0&scope=openid profile&response_type=code&redirect_uri=https://myapp/callback
+http://localhost:5000/connect/authorize?client_id=0ace935c-6286-498a-a550-d29d7e446da0&code_challenge=OtqjddjNeT8jjLkTbGSA3o0iGsm8gvzgpRxvA7lDhA8&code_challenge_method=S256&scope=openid profile&response_type=code&redirect_uri=https://myapp/callback
+
+ReturnUrl: http://localhost:5000/connect/authorize/callback?client_id=0ace935c-6286-498a-a550-d29d7e446da0&scope=openid%20profile&response_type=code&redirect_uri=https%3A%2F%2Fmyapp%2Fcallback
+
+
+
+
